@@ -9,14 +9,17 @@
         <h4>{{ number }}</h4>
       </div>
     </div>
-    <hr />
+    <DashboardHr />
     <div class="percentage-statistic">
-      <span>{{ percent }}</span>&nbsp;
-      <p>than lask week</p>
+      <span>{{ percent }}</span
+      >&nbsp;
+      <p v-if="percent">than lask week</p>
+      <p v-else>Just updated</p>
     </div>
   </div>
 </template>
 <script>
+import DashboardHr from "../Hr/Hr.vue";
 export default {
   name: "DashboardDetail",
   props: {
@@ -24,6 +27,10 @@ export default {
     number: String,
     iconBackgroundColor: String,
     percent: String,
+    persentDetail: String,
+  },
+  components: {
+    DashboardHr,
   },
   computed: {
     iconBackgroundStyle() {
@@ -50,22 +57,6 @@ export default {
   border-radius: 0.75rem;
   box-shadow: rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem,
     rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem;
-}
-.numbers-statistic-item hr {
-  flex-shrink: 0;
-  border-top: 0px solid rgba(0, 0, 0, 0.12);
-  border-right: 0px solid rgba(0, 0, 0, 0.12);
-  border-left: 0px solid rgba(0, 0, 0, 0.12);
-  background-color: transparent;
-  height: 0.0625rem;
-  margin: 1rem 0px;
-  opacity: 0.25;
-  background-image: linear-gradient(
-    to right,
-    rgba(52, 71, 103, 0),
-    rgba(52, 71, 103, 0.4),
-    rgba(52, 71, 103, 0)
-  ) !important;
 }
 .title-container {
   display: flex;

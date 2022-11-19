@@ -19,6 +19,7 @@
         </div>
       </nav>
       <DashboardDetails />
+      <DashboardStatistics />
     </div>
   </div>
 </template>
@@ -26,11 +27,13 @@
 <script>
 import HomeDrawer from "./components/Homedrawer.vue";
 import DashboardDetails from "./components/DashboardDetails/DashboardDetails.vue";
+import DashboardStatistics from "./components/DashboardStatistics/DashboardStatistics.vue";
 export default {
   name: "App",
   components: {
     HomeDrawer,
-    DashboardDetails
+    DashboardDetails,
+    DashboardStatistics,
   },
 };
 </script>
@@ -41,6 +44,9 @@ export default {
   padding: 0;
   font-family: Roboto, Helvetica, Arial, sans-serif;
   letter-spacing: 0.00938em;
+}
+body {
+  background-color: #f0f2f5;
 }
 .app-container {
   width: 100%;

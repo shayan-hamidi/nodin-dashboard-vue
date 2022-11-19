@@ -34,7 +34,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scope>
 .numbers-statistics-container {
   width: 100%;
   margin-top: 30px;
