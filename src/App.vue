@@ -1,28 +1,68 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app-container">
+    <HomeDrawer />
+    <div class="content-container">
+      <nav>
+        <div class="header-container">
+          <div class="breadcrumbs-container">
+            <font-awesome-icon icon="fa-solid fa-user-secret" />
+            <h5>/ Dashboard</h5>
+          </div>
+          <div class="header-container">
+            <h4>Dashboard</h4>
+          </div>
+        </div>
+        <div class="toolbar-container">
+          <font-awesome-icon icon="fa-solid fa-user-secret" />
+          <font-awesome-icon icon="fa-solid fa-user-secret" />
+          <font-awesome-icon icon="fa-solid fa-user-secret" />
+        </div>
+      </nav>
+      <DashboardDetails />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HomeDrawer from "./components/Homedrawer.vue";
+import DashboardDetails from "./components/DashboardDetails/DashboardDetails.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HomeDrawer,
+    DashboardDetails
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.00938em;
+}
+.app-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.content-container {
+  align-self: flex-start;
+  margin-top: 25px;
+  width: inherit;
+  margin-right: 40px;
+}
+.breadcrumbs-container {
+  display: flex;
+}
+.toolbar-container {
+  display: flex;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: red;
 }
 </style>
