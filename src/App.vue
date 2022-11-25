@@ -6,6 +6,7 @@
       <DashboardDetails />
       <DashboardStatistics />
       <DashboardTableOverViews />
+      <DashboardWeatherCheck />
     </div>
   </div>
 </template>
@@ -16,6 +17,7 @@ import DashboardDetails from "./components/DashboardDetails/DashboardDetails.vue
 import DashboardStatistics from "./components/DashboardStatistics/DashboardStatistics.vue";
 import DashboardTableOverViews from "./components/DashboardTableOverViews/DashboardTableOverViews.vue";
 import DashboardNav from "./components/DashboardNav/DashboardNav.vue";
+import DashboardWeatherCheck from "./components/DashboardWeatherCheck/DashboardWeatherCheck.vue";
 export default {
   name: "App",
   components: {
@@ -24,6 +26,7 @@ export default {
     DashboardStatistics,
     DashboardTableOverViews,
     DashboardNav,
+    DashboardWeatherCheck,
   },
 };
 </script>
