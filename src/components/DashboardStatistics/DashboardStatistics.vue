@@ -47,8 +47,43 @@ export default {
 <style scope>
 .numbers-statistics-container {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 70px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 576px) {
+  .numbers-statistics-container {
+    justify-content: center;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .numbers-statistics-container {
+    justify-content: center;
+  }
+}
+@media (min-width: 767px) and (max-width: 992px) {
+  .numbers-statistics-container {
+    justify-content: center;
+  }
+}
+@media (min-width: 993px) and (max-width: 1300px) {
+  .numbers-statistics-container {
+    justify-content: center;
+  }
+  .statisticCard {
+    width: 310px;
+  }
+}
+@media (min-width: 1301px) and (max-width: 1400px) {
+  .statisticCard {
+    width: 320px;
+    margin: 30px 10px 20px 10px;
+  }
+}
+@media (min-width: 1401px) and (max-width: 1600px) {
+  .statisticCard {
+    width: 366px;
+    margin: 30px 10px 20px 10px;
+  }
 }
 </style>

@@ -51,7 +51,7 @@ export default {
 .statisticCard {
   color: rgba(0, 0, 0, 0.87);
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  min-width: 500px;
+  /* min-width: 500px; */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -90,7 +90,7 @@ export default {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-right: 4px;
-  width: 400px;
+  /* width: 400px; */
   margin: 0 auto;
 }
 .card-footer {
@@ -106,5 +106,34 @@ export default {
   letter-spacing: 0.02857em;
   color: rgb(123, 128, 154);
   font-weight: 300;
+}
+@media only screen and (max-width: 576px) {
+  .statisticCard {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .statisticCard {
+    width: 95%;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 767px) and (max-width: 992px) {
+  .statisticCard {
+    width: 70%;
+    margin: 30px 10px 20px 10px;
+  }
+}
+@media (min-width: 993px) and (max-width: 1300px) {
+  .statisticCard {
+    margin: 30px 10px 20px 10px;
+  }
+}
+@media (min-width: 1301px) and (max-width: 1600px) {
+  .statisticCard {
+    width: 320px;
+    margin: 30px 10px 20px 10px;
+  }
 }
 </style>

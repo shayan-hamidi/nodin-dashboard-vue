@@ -121,4 +121,33 @@ export default {
   display: flex;
   color: rgb(123, 128, 154);
 }
+
+@media only screen and (max-width: 576px) {
+  .numbers-statistic-item {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .numbers-statistic-item {
+    width: 95%;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 767px) and (max-width: 992px) {
+  .numbers-statistic-item {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 993px) and (max-width: 1300px) {
+  .numbers-statistic-item {
+    margin: 20px 10px 0px 10px;
+  }
+}
+@media (min-width: 1301px) and (max-width: 1600px) {
+  .numbers-statistic-item {
+    margin: 20px 10px 0px 10px;
+    width: 230px;
+  }
+}
 </style>

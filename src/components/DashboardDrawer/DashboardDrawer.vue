@@ -2,14 +2,18 @@
   <div class="drawer">
     <div>
       <div class="drawer-header-container">
-        <img src="../assets/download.png" width="40" alt="dashboard logo" />
+        <img src="../../assets/download.png" width="40" alt="dashboard logo" />
         <h5>Material Dashboard 2</h5>
       </div>
       <hr />
       <ul style="backgroundcolor: red">
         <li v-for="item in items" :key="item.message">
-          <font-awesome-icon icon="fa-solid fa-user-secret" />
-          {{ item.message }}
+          <div class="drawer-icons">
+            <font-awesome-icon icon="fa-solid fa-user-secret" />
+          </div>
+          <span>
+            {{ item.message }}
+          </span>
         </li>
       </ul>
     </div>
@@ -20,7 +24,7 @@
 </template>
 <script>
 export default {
-  name: "HomeDrawer",
+  name: "DashboardDrawer",
   data() {
     return {
       items: [
@@ -39,17 +43,41 @@ export default {
 </script>
 <style scope>
 .drawer {
-  width: auto;
+  width: 10%;
   height: 87vh;
   background-color: #262628;
   margin: 0px 20px 0px 20px;
   border-radius: 0.75rem;
-  position: sticky;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 50px;
+}
+.drawer-icons {
+  font-size: 25px;
+  color: white;
+}
+ul {
+  list-style-type: none;
+}
+ul li {
+  margin: 1px 0px 10px 0px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+ul li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+ul li span {
+  margin-left: 20px;
+  font-weight: 300;
+  font-size: 0.875rem;
+  color: white;
 }
 .update-button {
   outline: 0px;
@@ -107,5 +135,35 @@ hr {
     rgb(255, 255, 255),
     rgba(255, 255, 255, 0)
   ) !important;
+}
+@media only screen and (max-width: 576px) {
+  .drawer {
+    display: none;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .drawer {
+    display: none;
+  }
+}
+@media (min-width: 767px) and (max-width: 992px) {
+  .drawer {
+    width: 12%;
+  }
+}
+@media (min-width: 993px) and (max-width: 1300px) {
+  .drawer {
+    width: 15%;
+  }
+}
+@media (min-width: 1301px) and (max-width: 1400px) {
+  .drawer {
+    width: 12%;
+  }
+}
+@media (min-width: 1401px) and (max-width: 1600px) {
+  .drawer {
+    width: 12%;
+  }
 }
 </style>

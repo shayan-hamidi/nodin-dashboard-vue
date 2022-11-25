@@ -1,39 +1,29 @@
 <template>
   <div class="app-container">
-    <HomeDrawer />
+    <DashboardDrawer />
     <div class="content-container">
-      <nav>
-        <div class="header-container">
-          <div class="breadcrumbs-container">
-            <font-awesome-icon icon="fa-solid fa-user-secret" />
-            <h5>/ Dashboard</h5>
-          </div>
-          <div class="header-container">
-            <h4>Dashboard</h4>
-          </div>
-        </div>
-        <div class="toolbar-container">
-          <font-awesome-icon icon="fa-solid fa-user-secret" />
-          <font-awesome-icon icon="fa-solid fa-user-secret" />
-          <font-awesome-icon icon="fa-solid fa-user-secret" />
-        </div>
-      </nav>
+      <DashboardNav />
       <DashboardDetails />
       <DashboardStatistics />
+      <DashboardTableOverViews />
     </div>
   </div>
 </template>
 
 <script>
-import HomeDrawer from "./components/Homedrawer.vue";
+import DashboardDrawer from "./components/DashboardDrawer/DashboardDrawer.vue";
 import DashboardDetails from "./components/DashboardDetails/DashboardDetails.vue";
 import DashboardStatistics from "./components/DashboardStatistics/DashboardStatistics.vue";
+import DashboardTableOverViews from "./components/DashboardTableOverViews/DashboardTableOverViews.vue";
+import DashboardNav from "./components/DashboardNav/DashboardNav.vue";
 export default {
   name: "App",
   components: {
-    HomeDrawer,
+    DashboardDrawer,
     DashboardDetails,
     DashboardStatistics,
+    DashboardTableOverViews,
+    DashboardNav,
   },
 };
 </script>
@@ -58,17 +48,41 @@ body {
   align-self: flex-start;
   margin-top: 25px;
   width: inherit;
+  margin-left: 27%;
   margin-right: 40px;
 }
-.breadcrumbs-container {
-  display: flex;
+
+@media only screen and (max-width: 576px) {
+  .content-container {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
 }
-.toolbar-container {
-  display: flex;
+@media (min-width: 577px) and (max-width: 768px) {
+  .content-container {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
-nav {
-  display: flex;
-  justify-content: space-between;
-  background: red;
+@media (min-width: 767px) and (max-width: 992px) {
+  .content-container {
+    margin-right: 0px;
+  }
+}
+@media (min-width: 993px) and (max-width: 1300px) {
+  .content-container {
+    margin-right: 0px;
+  }
+}
+@media (min-width: 1301px) and (max-width: 1400px) {
+  .content-container {
+    margin-left: 21%;
+  }
+}
+@media (min-width: 1401px) and (max-width: 1600px) {
+  .content-container {
+    margin-left: 21%;
+    margin-right: 0px;
+  }
 }
 </style>

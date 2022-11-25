@@ -39,6 +39,30 @@ export default {
   width: 100%;
   margin-top: 30px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+@media only screen and (max-width: 576px) {
+  .numbers-statistics-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .numbers-statistics-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 767px) and (max-width: 992px) {
+  .numbers-statistics-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 993px) and (max-width: 1300px) {
+  .numbers-statistics-container {
+    flex-wrap: wrap;
+  }
 }
 </style>
