@@ -6,7 +6,7 @@
         <h5>Material Dashboard 2</h5>
       </div>
       <hr />
-      <ul style="backgroundcolor: red">
+      <ul>
         <li v-for="item in items" :key="item.message">
           <div class="drawer-icons">
             <font-awesome-icon icon="fa-solid fa-user-secret" />
@@ -119,6 +119,7 @@ h5 {
   margin: 0px 5px;
 }
 hr {
+  margin-bottom: 15px;
   height: 2px;
   color: white;
   margin-top: 25px;
