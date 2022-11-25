@@ -79,12 +79,12 @@ body {
 }
 @media (min-width: 1301px) and (max-width: 1400px) {
   .content-container {
-    margin-left: 21%;
+    margin-left: 20%;
   }
 }
 @media (min-width: 1401px) and (max-width: 1600px) {
   .content-container {
-    margin-left: 21%;
+    margin-left: 16%;
     margin-right: 0px;
   }
 }

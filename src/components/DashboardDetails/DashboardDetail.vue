@@ -126,6 +126,7 @@ export default {
   .numbers-statistic-item {
     width: 90%;
     margin-bottom: 20px;
+    margin-top: 40px;
   }
 }
 @media (min-width: 577px) and (max-width: 768px) {

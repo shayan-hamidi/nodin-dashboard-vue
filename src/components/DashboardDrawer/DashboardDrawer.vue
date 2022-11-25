@@ -159,12 +159,12 @@ hr {
 }
 @media (min-width: 1301px) and (max-width: 1400px) {
   .drawer {
-    width: 12%;
+    width: 11%;
   }
 }
 @media (min-width: 1401px) and (max-width: 1600px) {
   .drawer {
-    width: 12%;
+    width: 7.5%;
   }
 }
 </style>
